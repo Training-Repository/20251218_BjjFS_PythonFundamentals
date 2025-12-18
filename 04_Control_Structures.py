@@ -1,3 +1,5 @@
+import os
+
 # 1. Control Structures
 a = 55
 if a > 10:
@@ -27,15 +29,17 @@ for a in lst:
 else:
     print("Not Found")
 
-idx = 0
-while idx < len(lst):
+## While
+
+idx = len(lst)
+# while idx >= 0:
+while idx:
     if lst[idx] == srch:
         print("Found")
         break
-    idx += 1
+    idx -= 1
 else:
     print("Not Found")
-## While
 ## Do-While NOT supported in Python
 
 # 3. Match Case
@@ -49,3 +53,4 @@ match cs:
         print("Three")
     case _:
         print("Unclassfied")
+

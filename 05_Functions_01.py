@@ -134,21 +134,28 @@
 
 
 
-def PrintEmp(ceo, cto, **others):
-    print(f"{type(others)}, {others}")
-    print(f"{ceo = }, {cto = }", end=',')
-    for k, v in others.items():
-        print(f"{k}={v}", end=',')
-    print()
-    print
+# def PrintEmp(ceo, cto, **others):
+#     print(f"{type(others)}, {others}")
+#     print(f"{ceo = }, {cto = }", end=',')
+#     for k, v in others.items():
+#         print(f"{k}={v}", end=',')
+#     print()
+#     print
 
-PrintEmp(ceo="Rakesh", cto="Manish")
-PrintEmp(ceo="Rakesh", cto="Manish", cfo="Abhijeet")
+# PrintEmp(ceo="Rakesh", cto="Manish")
+# PrintEmp(ceo="Rakesh", cto="Manish", cfo="Abhijeet")
 
 
 
-def func(a, b, c):
-    print(a, b, c, sep='')
+# # def func(a, b, c):
+# #     print(a, b, c, sep='')
 
-func(10, 20, 30)
+# # func(10, 20, 30)
+
+# def func(*vargs, **kwargs):
+#     pass
+
+# func(1, 2)
+# func(1, 2, a=3, b=5)
+
 #endregion

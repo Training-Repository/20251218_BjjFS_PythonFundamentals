@@ -159,3 +159,58 @@
 # func(1, 2, a=3, b=5)
 
 #endregion
+
+
+#region Scopes ################################################################
+## LEGB - Local, External, Global, Builtin
+# def Outer():
+#     # global s1
+#     # print("Outer -->", s1)
+#     s1 = "Outer String"
+#     def Inner():
+#         s1 = "Inner String"
+#         # global s1
+#         # nonlocal s1
+#         # s1 = "Modified String"
+#         def InnerMost():
+#             # global s1
+#             # nonlocal s1
+#             s1 = "InnerMost String"
+#             print("InnerMost -->", s1)
+#         InnerMost()
+#         print("Inner -->", s1)
+#     Inner()
+#     print("Outer -->", s1)
+
+# s1 = "Global String"
+
+# Outer()
+# print("Global -->", s1)
+
+
+#################################
+
+
+def Outer():
+    s1 = "Outer String"
+    def Inner():
+        s1 = "Inner String"
+        def InnerMost():
+            # print(f"{globals() = }")
+            print(f"{globals()['Outer']}")
+            fn = globals()['Outer']
+            print(fn.locals()['s1'])
+            s1 = "InnerMost String"
+            # print(f"{locals() = }")
+            print("InnerMost -->", s1)
+        InnerMost()
+        print("Inner -->", s1)
+    Inner()
+    print("Outer -->", s1)
+
+s1 = "Global String"
+
+Outer()
+print("Global -->", s1)
+
+#endregion

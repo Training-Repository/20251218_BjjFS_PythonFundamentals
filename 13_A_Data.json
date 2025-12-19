@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 999.99,
+        "availability": true
+    },
+    {
+        "name": "Smartphone",
+        "category": "Electronics",
+        "price": 599.99,
+        "availability": true
+    }
+]

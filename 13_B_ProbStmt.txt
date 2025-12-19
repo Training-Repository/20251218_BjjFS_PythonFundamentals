@@ -1,0 +1,33 @@
+Task:
+
+    1. Parsing JSON Data:
+        * Read the provided JSON file (data.json) using the json module.
+        * Extract the following information from the JSON:
+                Name of the product.
+                Category of the product.
+                Price of the product.
+                Availability of the product.
+        * Print the extracted information.
+
+    2. Adding New Product:
+        * Create a new product entry with the following details:
+                Name: "Python Programming Book"
+                Category: "Books"
+                Price: $39.99
+                Availability: true
+        * Add the new product entry to the existing JSON structure.
+
+    3. Writing JSON Data:
+        * Write the modified JSON data back to a new JSON file (updated_data.json).
+        * Ensure the JSON file maintains the same structure as the original file, with the addition of the new product entry.
+
+Instructions:
+
+    * Use Python's json module to parse and manipulate JSON data.
+    * Ensure proper error handling is implemented for file operations and JSON parsing.
+    * Use meaningful variable names and comments to enhance code readability.
+    * Submit both the Python script and the updated JSON file (updated_data.json).
+    * Include any additional documentation or explanation as needed in the script.
+
+Note:
+Ensure that the provided JSON file (data.json) contains at least one product entry to facilitate the parsing and modification tasks.

@@ -192,6 +192,7 @@
 
 
 def Outer():
+    globals()["s1"] = "Modified String"
     s1 = "Outer String"
     def Inner():
         s1 = "Inner String"
@@ -199,7 +200,7 @@ def Outer():
             # print(f"{globals() = }")
             print(f"{globals()['Outer']}")
             fn = globals()['Outer']
-            print(fn.locals()['s1'])
+            # Can I access the local objs of a global function        # <-- Language safeguards against it 
             s1 = "InnerMost String"
             # print(f"{locals() = }")
             print("InnerMost -->", s1)
